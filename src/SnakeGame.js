@@ -305,6 +305,10 @@ Snake.prototype.drawLoop = function() {
   this.context.setTransform(1, 0, 0, 1, 0, 0);
   this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
+  if (!this.pieces.length) {
+    return;
+  }
+
   var headX = this.pieces[0].x;
   var headY = this.pieces[0].y;
 

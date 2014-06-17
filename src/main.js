@@ -6,8 +6,11 @@ var GameContainer = require('./GameContainer');
 //Snake Game
 var SnakeGame = require('./SnakeGame');
 
-
-var snakeApp = {
+/**
+ * Attach ResponsiveSnake Game To Window
+ * @type {{game: GameContainer, start: start, bindEvents: bindEvents}}
+ */
+var ResponsiveSnake = {
   /**
    * Initialize a new Game
    */
@@ -21,8 +24,8 @@ var snakeApp = {
    * Start Game and Bind Window Events
    */
   start : function () {
-    snakeApp.game.start();
-    snakeApp.bindEvents();
+    ResponsiveSnake.game.start();
+    ResponsiveSnake.bindEvents();
   },
 
   /**
@@ -38,5 +41,4 @@ var snakeApp = {
   }
 };
 
-//On Document Ready PreLoad Images
-$(document).ready(snakeApp.start);
+window.ResponsiveSnake = ResponsiveSnake;

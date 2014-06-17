@@ -789,6 +789,10 @@ Snake.prototype.drawLoop = function() {
   this.context.setTransform(1, 0, 0, 1, 0, 0);
   this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
+  if (!this.pieces.length) {
+    return;
+  }
+
   var headX = this.pieces[0].x;
   var headY = this.pieces[0].y;
 
@@ -917,8 +921,11 @@ var GameContainer = require('./GameContainer');
 //Snake Game
 var SnakeGame = require('./SnakeGame');
 
-
-var snakeApp = {
+/**
+ * Attach ResponsiveSnake Game To Window
+ * @type {{game: GameContainer, start: start, bindEvents: bindEvents}}
+ */
+var ResponsiveSnake = {
   /**
    * Initialize a new Game
    */
@@ -932,8 +939,8 @@ var snakeApp = {
    * Start Game and Bind Window Events
    */
   start : function () {
-    snakeApp.game.start();
-    snakeApp.bindEvents();
+    ResponsiveSnake.game.start();
+    ResponsiveSnake.bindEvents();
   },
 
   /**
@@ -949,8 +956,8 @@ var snakeApp = {
   }
 };
 
-//On Document Ready PreLoad Images
-$(document).ready(snakeApp.start);
+window.ResponsiveSnake = ResponsiveSnake;
+
 },{"./GameContainer":3,"./SnakeGame":6}],8:[function(require,module,exports){
 /*global module*/
 
