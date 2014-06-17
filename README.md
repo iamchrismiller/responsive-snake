@@ -1,4 +1,4 @@
-# Responsive Snake
+# Responsive Snake  [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 A Responsive HTML5 Snake Game with a particle explosion on food impact!
 
