@@ -14,28 +14,28 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
 
 ## Sample Markup
 
-  ```
-  <script src="../build/snake.build.js"></script>
+```
+<script src="../build/snake.build.js"></script>
 
-  <canvas id="snake-canvas" autofocus="autofocus" data-full-screen="true"></canvas>
+<canvas id="snake-canvas" autofocus="autofocus" data-full-screen="true"></canvas>
 
-  <div id="scoreboard">
-      <div id="score">
-          Score :
-          <span>0</span>
-      </div>
+<div id="scoreboard">
+    <div id="score">
+        Score :
+        <span>0</span>
+    </div>
 
-      <div id="hi-score">
-          Hi Score :
-          <span>0</span>
-      </div>
+    <div id="hi-score">
+        Hi Score :
+        <span>0</span>
+    </div>
 
-      <div id="bot-hi-score">
-          Bot Hi Score :
-          <span>0</span>
-      </div>
-  </div>
-  ```
+    <div id="bot-hi-score">
+        Bot Hi Score :
+        <span>0</span>
+    </div>
+</div>
+```
 
 ## To View The Example
 
