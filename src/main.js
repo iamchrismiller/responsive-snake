@@ -41,4 +41,5 @@ var ResponsiveSnake = {
   }
 };
 
+
 window.ResponsiveSnake = ResponsiveSnake;

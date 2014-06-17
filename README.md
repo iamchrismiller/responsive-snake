@@ -10,12 +10,21 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
 
 ## Usage
 
-  You may define a width / height on the canvas tag itself or use the dat attribute `data-full-screen="true"` for fullscreen
+  Install through Bower
+
+  `bower install responsive-snake`
+
+  Customization:
+
+    You may define a width / height on the canvas tag itself
+    OR use the data attribute `data-full-screen="true"` for full-screen
+
+    WIP
 
 ## Sample Markup
 
 ```
-<script src="../build/snake.build.js"></script>
+<script src="path/to/snake.build.min.js"></script>
 
 <canvas id="snake-canvas" autofocus="autofocus" data-full-screen="true"></canvas>
 
