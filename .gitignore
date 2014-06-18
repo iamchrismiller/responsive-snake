@@ -5,3 +5,4 @@ htdocs/.sass-cache
 .sass-cache/
 bower_components/
 reports/
+.grunt/grunt-gh-pages/
