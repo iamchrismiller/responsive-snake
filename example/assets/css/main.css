@@ -34,7 +34,7 @@ body .intro p {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000334}}
 body .container {
-  background: url("/example/assets/img/sand.jpg") no-repeat center center fixed;
+  background: url("../img/sand.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
