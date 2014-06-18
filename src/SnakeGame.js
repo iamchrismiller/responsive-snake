@@ -41,7 +41,7 @@ var Snake = function(options) {
     snakeSize      : 3,
     foodColor      : null,
     bot            : true,
-    timeout        : 3000,
+    timeout        : 1000,
     explosion      : true
   }, options);
 
@@ -58,6 +58,15 @@ var Snake = function(options) {
 
   this.direction = this.DIRECTIONS.RIGHT;
   this.directionQueue = [];
+};
+
+/**
+ * Set Options For Current Snake
+ * @param options
+ * @returns {*}
+ */
+Snake.prototype.setOptions = function(options) {
+  return $.extend(this.settings, options);
 };
 
 /**

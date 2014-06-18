@@ -21,7 +21,8 @@
 <body>
     <div class="intro">
         <h2>Responsive Snake</h2>
-        <p>Created By Chris Miller</p>
+        <p>(R) - Reset | (Space) - Pause | (B) - Bot </p>
+        <p>Created By <a href="https://github.com/iamchrismiller" target="_BLANK">Chris Miller</a></p>
     </div>
 
     <div class="container absolute">
@@ -55,7 +56,14 @@
 
 <script>
     //Start Snake Game
-    $(document).ready(ResponsiveSnake.start);
+    $(document).ready(function() {
+        ResponsiveSnake.start({
+            snakePixels    : 12,
+            snakeSize      : 4,
+            bot            : true,
+            explosion      : true
+        });
+    });
 </script>
 </body>
 </html>

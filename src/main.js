@@ -15,15 +15,17 @@ var ResponsiveSnake = {
    * Initialize a new Game
    */
   game : new GameContainer({
-    canvas : "#canvas",
-    inst : new SnakeGame("#canvas"),
-    explosion : true
+    inst : new SnakeGame()
   }),
 
   /**
    * Start Game and Bind Window Events
    */
-  start : function () {
+  start : function (options) {
+    if (options) {
+      ResponsiveSnake.game.inst.setOptions(options);
+    }
+
     ResponsiveSnake.game.start();
     ResponsiveSnake.bindEvents();
   },
@@ -35,11 +37,25 @@ var ResponsiveSnake = {
     if (this.game.started) {
       //Pause Game on Window Blur
       $(window)
-        .focus(this.game.play.bind(this.game))
-        .blur(this.game.pause.bind(this.game));
+        .focus(function() {
+          if (this.game.started) {
+            this.game.play.bind(this.game);
+          }
+        }.bind(this))
+        .blur(function() {
+          if (this.game.started) {
+            this.game.pause.bind(this.game);
+          }
+        }.bind(this));
     }
   }
 };
 
-
-window.ResponsiveSnake = ResponsiveSnake;
+//Handle Module Exports
+if (typeof module !== 'undefined' && !window) {
+  //Export to NODE
+  module.exports = ResponsiveSnake;
+} else if (typeof window !== 'undefined') {
+  //Export To Browser
+  window.ResponsiveSnake = ResponsiveSnake;
+}

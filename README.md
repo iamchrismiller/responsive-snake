@@ -57,6 +57,7 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
 
 ## Release History
 
+ * 2014-06-17   v0.1.1   Added "play" options, exports for AMD/CommonJS
  * 2014-06-17   v0.1.0   Initial Release
 
 ---

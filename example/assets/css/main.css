@@ -34,22 +34,33 @@ body .intro p {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000334}}
 body .container {
-  background: url("/example/assets/img/sand.jpg");
+  background: url("/example/assets/img/sand.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-animation: fadeIn 1s linear 0s;
+  -moz-animation: fadeIn 1s linear 0s;
+  -o-animation: fadeIn 1s linear 0s;
+  -ms-animation: fadeIn 1s linear 0s;
+  animation: fadeIn 1s linear 0s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000352}}
 body #snake-canvas {
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000356}}
 body a {
-  text-decoration: none;
-  color: #329ECC;
+  color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000360}}
 body .hidden {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000365}}
 body #scoreboard {
   position: absolute;
   bottom: 0;
@@ -58,14 +69,14 @@ body #scoreboard {
   background: rgba(0, 0, 0, 0.3);
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000373}}
 body #scoreboard div {
   opacity: .6;
   float: right;
   margin-right: 30px;
   margin-top: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cmiller\/development\/src\/snake-game\/example\/assets\/scss\/layout\.scss}line{font-family:\0000380}}
 body #scoreboard span {
   font-weight: bold;
 }

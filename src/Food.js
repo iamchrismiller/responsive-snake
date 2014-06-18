@@ -1,4 +1,3 @@
-
 /**
  * Food Class
  * Creating a simple 2d object
@@ -10,7 +9,7 @@ function Food(options) {
   this.x = this.options.x ? this.options.x : 0;
   this.y = this.options.y ? this.options.y : 0;
 
-  this.border = this.options.border ?  this.options.border : false;
+  this.border = this.options.border ? this.options.border : false;
   this.color = this.options.color ? this.options.color : "#FFF";
 }
 

@@ -32,7 +32,21 @@ body {
   }
 
   .container {
-    background : url('/example/assets/img/sand.jpg');
+
+    background                  : url('/example/assets/img/sand.jpg') no-repeat center center fixed;
+    -webkit-background-size     : cover;
+    -moz-background-size        : cover;
+    -o-background-size          : cover;
+    background-size             : cover;
+    height                      : 100%;
+    width                       : 100%;
+
+    -webkit-backface-visibility : hidden;
+    -webkit-animation           : fadeIn 1s linear 0s;
+    -moz-animation              : fadeIn 1s linear 0s;
+    -o-animation                : fadeIn 1s linear 0s;
+    -ms-animation               : fadeIn 1s linear 0s;
+    animation                   : fadeIn 1s linear 0s;
   }
 
   #snake-canvas {
@@ -40,8 +54,7 @@ body {
   }
 
   a {
-    text-decoration : none;
-    color           : #329ECC;
+    color           : white;
   }
 
   .hidden {
