@@ -84,15 +84,23 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
 
   visit http://iamchrismiller.github.io/responsive-snake/example/
 
-  OR
+  OR clone the repo and open the example
 
   `git clone https://github.com/iamchrismiller/responsive-snake.git`
 
-  `npm install`
-
-  `grunt dev`
+  `npm install && grunt dev`
 
   `open http://127.0.0.1:8000/example/`
+
+
+## Contributing
+
+ In lieu of a formal style-guide, take care to maintain the existing coding style. Lint and test your code using grunt (dev).
+
+
+## License
+
+ Licensed under the MIT license.
 
 
 ## Release History
@@ -100,5 +108,10 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
  * 2014-06-17   v0.1.2   Fixed bot enabled flag
  * 2014-06-17   v0.1.1   Added "play" options, exports for AMD/CommonJS
  * 2014-06-17   v0.1.0   Initial Release
+
+
+## Author
+
+ Chris Miller
 
 ---
