@@ -42,11 +42,6 @@ body {
     width                       : 100%;
 
     -webkit-backface-visibility : hidden;
-    -webkit-animation           : fadeIn 1s linear 0s;
-    -moz-animation              : fadeIn 1s linear 0s;
-    -o-animation                : fadeIn 1s linear 0s;
-    -ms-animation               : fadeIn 1s linear 0s;
-    animation                   : fadeIn 1s linear 0s;
   }
 
   #snake-canvas {

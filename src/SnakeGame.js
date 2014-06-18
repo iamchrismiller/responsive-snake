@@ -40,7 +40,7 @@ var Snake = function(options) {
     snakePixels    : 14,
     snakeSize      : 3,
     foodColor      : null,
-    bot            : true,
+    bot            : false,
     timeout        : 1000,
     explosion      : true
   }, options);
@@ -53,12 +53,12 @@ var Snake = function(options) {
   };
 
   //Bot Support
-  this.bot = new Bot({directions : this.DIRECTIONS});
-  if (this.settings.bot) this.bot.enable();
+  this.bot = new Bot({directions : this.DIRECTIONS, enabled : this.settings.bot});
 
   this.direction = this.DIRECTIONS.RIGHT;
   this.directionQueue = [];
 };
+
 
 /**
  * Set Options For Current Snake
@@ -66,7 +66,10 @@ var Snake = function(options) {
  * @returns {*}
  */
 Snake.prototype.setOptions = function(options) {
-  return $.extend(this.settings, options);
+  $.extend(this.settings, options);
+  if (this.settings.bot === true) {
+    this.bot.enable();
+  }
 };
 
 /**
@@ -139,7 +142,7 @@ Snake.prototype.lose = function() {
  * @param direction
  */
 Snake.prototype.queueDirection = function(direction) {
-  if (this.bot.enabled) this.bot.disable();
+  if (this.bot.enabled === true) this.bot.disable();
   //Don't Allow The Same Moves To Stack Up
   if (this.started && this.directionQueue[this.directionQueue.length - 1] !== direction) {
     this.directionQueue.push(direction);
@@ -311,7 +314,6 @@ Snake.prototype.drawLoop = function() {
   var self = this;
 
   //Clear Canvas Context Before Redraw
-  this.context.setTransform(1, 0, 0, 1, 0, 0);
   this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
   if (!this.pieces.length) {
@@ -324,7 +326,7 @@ Snake.prototype.drawLoop = function() {
   //reset direction
   this.direction = this.getDirection();
 
-  if (this.bot && this.bot.enabled) {
+  if (this.bot && this.bot.enabled === true) {
     this.direction = this.bot.getNextMove(this.pieces, this.food[0], {x : headX, y : headY}, this.direction, this.DIRECTIONS);
   }
 

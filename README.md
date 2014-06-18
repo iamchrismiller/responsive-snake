@@ -16,10 +16,24 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
 
   Customization:
 
-    You may define a width / height on the canvas tag itself
+    You may define a width (width="400px") / height (height="400px") on the canvas tag itself
     OR use the data attribute `data-full-screen="true"` for full-screen
 
-    WIP
+  Game Options
+
+    - snakePixels (int) default : 14
+        - Snake piece width in pixels
+    - snakeSize (int) default : 3
+        - How many snake pieces to start with
+    - foodColor (string) default : random color
+        - Custom Food Color (#ff0000 || rgb(0,0,0))
+    - bot (int) default : true
+        - Do you want the bot to play when you start the game?
+    - timeout (int) default : 1000
+        - How long to wait in between game loses
+    - explosion (bool) default : true
+        - Do you want to particle explosion when food is consumed
+
 
 ## Sample Markup
 
@@ -44,9 +58,27 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
         <span>0</span>
     </div>
 </div>
+
+<script>
+    //Start Snake Game
+    $(document).ready(function() {
+        ResponsiveSnake.start({
+            snakePixels    : 14,
+            snakeSize      : 4,
+            bot            : true,
+            explosion      : true
+        });
+    });
+</script>
 ```
 
 ## To View The Example
+
+  visit http://iamchrismiller.github.io/responsive-snake/example/
+
+  OR
+
+  `git clone https://github.com/iamchrismiller/responsive-snake.git`
 
   `npm install`
 
@@ -57,6 +89,7 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
 
 ## Release History
 
+ * 2014-06-17   v0.1.2   Fixed bot enabled flag
  * 2014-06-17   v0.1.1   Added "play" options, exports for AMD/CommonJS
  * 2014-06-17   v0.1.0   Initial Release
 
