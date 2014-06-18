@@ -34,6 +34,14 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
     - explosion (bool) default : true
         - Do you want to particle explosion when food is consumed
 
+  Supported Keys / Touches
+
+    - (swipeUp, swipeDown, swipeLeft, swipeRight) Mobile Touch Events  - Directional
+    - (UP/Down/Left/Right) Keyboard Arrow Keys - Directional
+    - (O) - Game On/Off
+    - (R) - Game Restart
+    - (B) - Enable Bot
+    - (Space Bar) - Pause/Resume Toggle
 
 ## Sample Markup
 
