@@ -110,6 +110,7 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
 
 ## Release History
 
+ * 2014-06-20   v0.1.5   Added console strip on build
  * 2014-06-20   v0.1.4   Added custom snake head color
  * 2014-06-20   v0.1.3   Added key events for (+/-) Frames Per Second
  * 2014-06-17   v0.1.2   Fixed bot enabled flag
