@@ -356,6 +356,12 @@ GameContainer.prototype.onKeydown = function (event) {
     case 39 :
       this.inst.queueDirection(this.inst.DIRECTIONS.RIGHT);
       break;
+    case 187: //+
+      this.inst.increaseFPS(1);
+      break;
+    case 189: //-
+      this.inst.decreaseFPS(1);
+      break;
     case 66 :
       if (this.inst.bot) {
         this.inst.bot.enable();
@@ -498,7 +504,6 @@ var Snake = function(options) {
   this.score = 0;
   this.started = false;
   this.fps = 15;
-
   this.gravity = 1;
   this.particles = [];
   this.particleCount = 150;
@@ -787,6 +792,23 @@ Snake.prototype.scorePoint = function() {
   this.score++;
   if (this.onScore && typeof this.onScore === 'function') {
     this.onScore(this.score);
+  }
+};
+
+
+/**
+ * Increase Snake FPS draw loop
+ */
+Snake.prototype.increaseFPS = function(amount) {
+  this.fps += amount;
+};
+
+/**
+ * Decrease Snake FPS draw loop
+ */
+Snake.prototype.decreaseFPS = function(amount) {
+  if (this.fps - amount > 0) {
+    this.fps -= amount;
   }
 };
 

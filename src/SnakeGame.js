@@ -15,7 +15,6 @@ var Snake = function(options) {
   this.score = 0;
   this.started = false;
   this.fps = 15;
-
   this.gravity = 1;
   this.particles = [];
   this.particleCount = 150;
@@ -304,6 +303,23 @@ Snake.prototype.scorePoint = function() {
   this.score++;
   if (this.onScore && typeof this.onScore === 'function') {
     this.onScore(this.score);
+  }
+};
+
+
+/**
+ * Increase Snake FPS draw loop
+ */
+Snake.prototype.increaseFPS = function(amount) {
+  this.fps += amount;
+};
+
+/**
+ * Decrease Snake FPS draw loop
+ */
+Snake.prototype.decreaseFPS = function(amount) {
+  if (this.fps - amount > 0) {
+    this.fps -= amount;
   }
 };
 
