@@ -25,6 +25,8 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
         - Snake piece width in pixels
     - snakeSize (int) default : 3
         - How many snake pieces to start with
+    - headColor (string) default : transparent
+        - Custom Head Color (#ff0000 || rgb(0,0,0))
     - foodColor (string) default : random color
         - Custom Food Color (#ff0000 || rgb(0,0,0))
     - bot (int) default : true
@@ -108,6 +110,7 @@ A Responsive HTML5 Snake Game with a particle explosion on food impact!
 
 ## Release History
 
+ * 2014-06-20   v0.1.4   Added custom snake head color
  * 2014-06-20   v0.1.3   Added key events for (+/-) Frames Per Second
  * 2014-06-17   v0.1.2   Fixed bot enabled flag
  * 2014-06-17   v0.1.1   Added "play" options, exports for AMD/CommonJS

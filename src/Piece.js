@@ -25,9 +25,14 @@ Piece.prototype.updatePosition = function (x, y) {
 /**
  * Draw Piece To Canvas
  * @param context
+ * @param updateColor
  */
-Piece.prototype.draw = function (context) {
-  context.fillStyle = this.color;
+Piece.prototype.draw = function (context, updateColor) {
+  if (typeof updateColor === 'string') {
+    context.fillStyle = updateColor;
+  } else {
+    context.fillStyle = this.color;
+  }
   context.strokeStyle = this.border;
   context.fillRect(this.x * this.width, this.y * this.width, this.width, this.width);
   context.strokeRect(this.x * this.width, this.y * this.width, this.width, this.width);

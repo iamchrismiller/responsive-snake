@@ -477,9 +477,14 @@ Piece.prototype.updatePosition = function (x, y) {
 /**
  * Draw Piece To Canvas
  * @param context
+ * @param updateColor
  */
-Piece.prototype.draw = function (context) {
-  context.fillStyle = this.color;
+Piece.prototype.draw = function (context, updateColor) {
+  if (typeof updateColor === 'string') {
+    context.fillStyle = updateColor;
+  } else {
+    context.fillStyle = this.color;
+  }
   context.strokeStyle = this.border;
   context.fillRect(this.x * this.width, this.y * this.width, this.width, this.width);
   context.strokeRect(this.x * this.width, this.y * this.width, this.width, this.width);
@@ -528,6 +533,7 @@ var Snake = function(options) {
     snakePixels    : 14,
     snakeSize      : 3,
     foodColor      : null,
+    headColor      : 'rgba(0,0,0,0)',
     bot            : false,
     timeout        : 1000,
     explosion      : true
@@ -889,8 +895,8 @@ Snake.prototype.drawLoop = function() {
   }
 
   //Draw Snake
-  this.pieces.forEach(function(piece) {
-    piece.draw(self.context);
+  this.pieces.forEach(function(piece,ix) {
+    piece.draw(self.context, ix === 0 ? self.settings.headColor : null);
   });
 
   //Draw Food
@@ -925,7 +931,7 @@ Snake.prototype.particleLoop = function() {
     var self = this;
     var particles = [];
 
-    this.particles.forEach(function(particle,ix) {
+    this.particles.forEach(function(particle) {
       //Apply Some Gravity
       particle.velocity.y += self.gravity;
 
